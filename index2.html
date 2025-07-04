@@ -12,7 +12,7 @@
             border: 1px solid black;
             background-color: rgb(124, 240, 137);
             border-radius: 30px;
-          
+          ;
         }
         
         #box1{
@@ -41,8 +41,8 @@
           
         }
         .icon{
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             /* border: 1px solid black; */
 
             margin: 3px;
@@ -52,6 +52,13 @@
             justify-content: center;
             background-color: rgb(15, 218, 56);
             border-radius: 10px;
+            border-left: 5px solid black;
+            border-bottom: 5px solid black;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+        }
+        .icon:hover{
+            background-color: yellow;
         }
     </style>
 </head>
@@ -61,20 +68,20 @@
     <div id="box2">
         <div id="2nd" class="icon">2nd</div>
         <div id="deg" class="icon">Deg</div>
-        <div id="sin" class="icon">sin</div>
-        <div id="cos" class="icon">cos</div>
-        <div id="tan" class="icon">tan</div>
-        <div id="tdp" class="icon">x<sup>y</sup></div>
-        <div id="lg" class="icon">lg</div>
+        <div id="sin" class="icon sy">sin</div>
+        <div id="cos" class="icon sy">cos</div>
+        <div id="tan" class="icon sy">tan</div>
+        <div id="tdp" class="icon sy">xʸ</div>
+        <div id="lg" class="icon sy">lg</div>
         <div id="In" class="icon">In</div>
-        <div id="ba1" class="icon">(</div>
-        <div id="ba2" class="icon">)</div>
-        <div id="rot" class="icon">√</div>
+        <div id="ba1" class="icon sy">(</div>
+        <div id="ba2" class="icon sy">)</div>
+        <div id="rot" class="icon sy">√</div>
         <div id="c" class="icon">C</div>
         <div id="kata" class="icon">❌</div>
-        <div id="parcent" class="icon">%</div>
+        <div id="parcent" class="icon sy">%</div>
         <div id="vag" class="icon sy">÷</div>
-        <div id="fac" class="icon">!</div>
+        <div id="fac" class="icon sy">!</div>
         <div id="seven" class="icon num">7</div>
         <div id="eight" class="icon num">8</div>
         <div id="nine" class="icon num">9</div>
@@ -92,10 +99,13 @@
         <div id="fake" class="icon "></div>
         <div id="e" class="icon">e</div>
         <div id="zero" class="icon num">0</div>
-        <div id="dot" class="icon">.</div>
+        <div id="dot" class="icon sy">.</div>
         <div id="equal" class="icon">=</div>
     </div>
     </div>
     <script src="scripts2.js"></script>
 </body>
 </html>
+
+
+
