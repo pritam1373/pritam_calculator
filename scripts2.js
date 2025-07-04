@@ -4,6 +4,8 @@ e=document.getElementById("equal")
 v=document.getElementById("vag")
 g=document.getElementById("gun")
 t=document.getElementById("tdp")
+c=document.getElementById("rl")
+
 
 
 b1=document.getElementById("box1")
@@ -41,5 +43,7 @@ e.addEventListener("click",()=>{
         b1.textContent = b1.textContent + " = " + result
         
 })
-// console.log(Math.sin(90* Math.PI / 180))
+c.addEventListener("click", () =>{
+        location.reload()
+})
 
