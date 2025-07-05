@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-          
-        .container{
+        #container {
             width: 360px;
-            height: 750px;
+            height: 740px;
             border: 1px solid black;
             background-color: rgb(124, 240, 137);
             border-radius: 30px;
-          ;
+           
+            overflow: auto;
+            scrollbar-width: none;
         }
-        
-        #box1{
-            width: 260px;
+
+        #box1 {
+            width: 256px;
             height: 150px;
             border: 1px solid black;
             margin-top: 10px;
@@ -27,20 +29,26 @@
             word-wrap: normal;
             font-size: 25px;
             padding: 20px;
+            border-left: 12px solid orange;
+            border-bottom: 12px solid orange;
+            border-right: 10px solid orange;
+            border-top: 10px solid orange;
         }
-        #box2{
-            width: 320px; 
-            height: 500px;
-            /* border: 1px solid black; */
-            margin-top: 30px;
-            margin-left: 15px;
-          display: flex;
-          flex-wrap: wrap;
-          align-content: flex-start;
 
-          
+        #box2 {
+            width: 320px;
+            height: 450px;
+            /* border: 1px solid black; */
+            margin-top: 10px;
+            margin-left: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        z-index: 2;
+
         }
-        .icon{
+
+        .icon {
             width: 50px;
             height: 50px;
             /* border: 1px solid black; */
@@ -57,61 +65,129 @@
             border-top: 1px solid black;
             border-right: 1px solid black;
         }
-        .icon:hover{
+
+        .icon:hover {
             background-color: yellow;
         }
-        #2nd{
-             font-size: 25px;
+        #botam{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            margin-left: 140px;
+            margin-top: 5px;
+            border-radius: 50%;
+            background-color: rgb(22, 213, 22);
+    
+            z-index: 1;
         }
-         #Deg{
-             font-size: 25px;
+        #botam2{
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-left: 10px;
+            border-radius: 50%;
+            background-color: red;
+            border-left: 5px;
+            font-size: 18px;
+            text-align: center;
+            color: blue;
+            font-weight: 1000;
+        }
+        #cover1{
+            width: 160px;
+            height: 210px;
+            border: 1px solid black;
+            position: relative;
+            top:-727px;
+            left: 26px;
+            background-color: brown;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid white;
+        }
+     #cover2{
+            width: 154px;
+            height: 210px;
+            border: 1px solid black;
+            position: relative;
+            top:-941px;
+            left: 187px;
+               border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            border-left: 1px solid white;
+            border-right: 2px solid black;
+            background-color: brown;
+            
+        }
+        #botam2:hover{
+            background-color: yellow;
+        }
+        #cover3{
+            width: 320px;
+            height: 450px;
+            border: 1px solid black;
+            position: relative;
+            top: -880px;
+            left: 10px;
+            border-radius: 20px;
+            background-color: rgb(203, 17, 95);
+            border-left: 5px solid black;
+         
+            border-bottom: 5px solid black;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-    <div id="box1"></div>
-    <div id="box2">
-        <div id="2nd" class="icon">2nd</div>
-        <div id="deg" class="icon">Deg</div>
-        <div id="sin" class="icon sy">sin</div>
-        <div id="cos" class="icon sy">cos</div>
-        <div id="tan" class="icon sy">tan</div>
-        <div id="tdp" class="icon sy">xʸ</div>
-        <div id="lg" class="icon sy">lg</div>
-        <div id="In" class="icon">In</div>
-        <div id="ba1" class="icon sy">(</div>
-        <div id="ba2" class="icon sy">)</div>
-        <div id="rot" class="icon sy">√</div>
-        <div id="rl" class="icon">C</div>
-        <div id="kata" class="icon">❌</div>
-        <div id="parcent" class="icon sy">%</div>
-        <div id="vag" class="icon sy">÷</div>
-        <div id="fac" class="icon sy">!</div>
-        <div id="seven" class="icon num">7</div>
-        <div id="eight" class="icon num">8</div>
-        <div id="nine" class="icon num">9</div>
-        <div id="gun" class="icon sy">×</div>
-        <div id="oneby" class="icon num">1/x</div>
-        <div id="four" class="icon num">4</div>
-        <div id="five" class="icon num">5</div>
-        <div id="six" class="icon num">6</div>
-        <div id="biyok" class="icon sy">-</div>
-        <div id="pai" class="icon num">π</div>
-        <div id="one" class="icon num">1</div>
-        <div id="two" class="icon num">2</div>
-        <div id="three" class="icon num">3</div>
-        <div id="jok" class="icon sy">+</div>
-        <div id="fake" class="icon "></div>
-        <div id="e" class="icon">e</div>
-        <div id="zero" class="icon num">0</div>
-        <div id="dot" class="icon sy">.</div>
-        <div id="equal" class="icon">=</div>
+    <div id="container">
+        <div id="box1"></div>
+        <div id="botam"><Div id="botam2">On</Div></div>
+        <div id="box2">
+            <div id="2nd" class="icon">2nd</div>
+            <div id="deg" class="icon">Deg</div>
+            <div id="sin" class="icon sy">sin</div>
+            <div id="cos" class="icon sy">cos</div>
+            <div id="tan" class="icon sy">tan</div>
+            <div id="tdp" class="icon sy">xʸ</div>
+            <div id="lg" class="icon sy">lg</div>
+            <div id="In" class="icon">In</div>
+            <div id="ba1" class="icon sy">(</div>
+            <div id="ba2" class="icon sy">)</div>
+            <div id="rot" class="icon sy">√</div>
+            <div id="rl" class="icon">C</div>
+            <div id="kata" class="icon">❌</div>
+            <div id="parcent" class="icon sy">%</div>
+            <div id="vag" class="icon sy">÷</div>
+            <div id="fac" class="icon sy">!</div>
+            <div id="seven" class="icon num">7</div>
+            <div id="eight" class="icon num">8</div>
+            <div id="nine" class="icon num">9</div>
+            <div id="gun" class="icon sy">×</div>
+            <div id="oneby" class="icon num">1/x</div>
+            <div id="four" class="icon num">4</div>
+            <div id="five" class="icon num">5</div>
+            <div id="six" class="icon num">6</div>
+            <div id="biyok" class="icon sy">-</div>
+            <div id="pai" class="icon num">π</div>
+            <div id="one" class="icon num">1</div>
+            <div id="two" class="icon num">2</div>
+            <div id="three" class="icon num">3</div>
+            <div id="jok" class="icon sy">+</div>
+            <div id="fake" class="icon "></div>
+            <div id="e" class="icon">e</div>
+            <div id="zero" class="icon num">0</div>
+            <div id="dot" class="icon sy">.</div>
+            <div id="equal" class="icon">=</div>
+        </div>
+    <div id="cover1"></div>
+    <div id="cover2"></div>
+    <div id="cover3"></div>
     </div>
-    </div>
+   
+   
     <script src="scripts2.js"></script>
 </body>
+
 </html>
-
-
-
