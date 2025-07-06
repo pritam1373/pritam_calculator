@@ -6,21 +6,25 @@ g=document.getElementById("gun")
 t=document.getElementById("tdp")
 c=document.getElementById("rl")
 uni=document.getElementById("container")
-
+so=document.getElementById("sound")
 b1=document.getElementById("box1")
 b2=document.getElementById("box2")
 
 for (let i=0;i<n.length;i++){
 n[i].addEventListener("click",() =>{
+        so.play()
         b1.textContent +=n[i].textContent    
+                  
 })
 }
 
 for (let j=0;j<s.length;j++){
 s[j].addEventListener("click",() =>{
+           so.play()
         c1=s[j].textContent 
         d1=c1.replace(/xʸ/g,"^")
         b1.textContent += d1  
+         
 })
 }
 
@@ -36,6 +40,7 @@ function fac(p){
 e.addEventListener("click",()=>{
         // alert("pritam")
         c=b1.textContent
+         so.play()
         d=c.replace(/×/g,"*").replace(/÷/g,"/").replace(/\%/g,"*(1/100)").replace(/sin\(([^)]+)\)/g, (_, angle) => `Math.sin((${angle}) * Math.PI / 180)`).replace(/cos\(([^)]+)\)/g, (_, angle) => `Math.cos((${angle}) * Math.PI / 180)`).replace(/tan\(([^)]+)\)/g, (_, angle) => `Math.tan((${angle}) * Math.PI / 180)`).replace(/lg\(([^)]+)\)/g, (_, val) => `Math.log10(${val})`).replace(/\^/g,"**").replace(/√/,"Math.sqrt").replace(/(\d+)!/g, 'fac($1)').replace(/π/g,"3.1415926536")
         // .replace(/\!/g,"fac")
         result=eval(d)
@@ -44,7 +49,8 @@ e.addEventListener("click",()=>{
 })
 
 c.addEventListener("click", () =>{
-        location.reload()
+        b1.innerHTML=""
+           so.play()
 })
 
 bot2=document.getElementById("botam2")
