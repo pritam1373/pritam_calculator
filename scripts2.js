@@ -1,6 +1,12 @@
 n=document.getElementsByClassName("num")
+ico=document.getElementsByClassName("icon")
+
 s=document.getElementsByClassName("sy")
 e=document.getElementById("equal")
+so=document.getElementById("sound")
+k=document.getElementById("kata")
+
+
 v=document.getElementById("vag")
 g=document.getElementById("gun")
 t=document.getElementById("tdp")
@@ -13,8 +19,7 @@ b2=document.getElementById("box2")
 for (let i=0;i<n.length;i++){
 n[i].addEventListener("click",() =>{
         so.play()
-        b1.textContent +=n[i].textContent    
-                  
+        b1.textContent +=n[i].textContent      
 })
 }
 
@@ -27,6 +32,19 @@ s[j].addEventListener("click",() =>{
          
 })
 }
+k.addEventListener("click",()=>{
+      k1=b1.innerHTML
+        if(k1.endsWith("sin")|| k1.endsWith("cos") || k1.endsWith("tan") ){
+        k2=k1.slice(0,-3)
+        b1.textContent=k2
+        }
+        else{
+     
+        k2=k1.slice(0,-1)
+        b1.textContent=k2
+        }
+
+})
 
 function fac(p){
         p1=1
