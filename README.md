@@ -1,1 +1,1 @@
-# pritam_calculator
+# web_calculator
